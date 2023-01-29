@@ -48,7 +48,7 @@
  body {
      margin: 0;
      font-family: var(--bs-font-sans-serif);
-     font-size: 1rem;
+     font-size: 14px;
      font-weight: 400;
      line-height: 1.5;
      color: #212529;
@@ -2409,7 +2409,7 @@
      padding: .5rem 1rem;
      margin: -.5rem -1rem;
      -webkit-margin-end: 1rem;
-     margin-inline-end: 1rem
+     margin-inline-end: 1rem;
  }
 
  textarea.form-control {
@@ -11699,7 +11699,7 @@
      }
 
      .d-print-table-row {
-         display: table-row !important
+         display: table-row !important  
      }
 
      .d-print-table-cell {
