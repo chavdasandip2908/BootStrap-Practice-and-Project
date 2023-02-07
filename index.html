@@ -1,92 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+        <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        
     <link rel="stylesheet" href="bootstrap.min.css">
     <style>
-        #green {
-            background-color: indianred;
-            height: 100px;
+        body {
+            padding: 0;
+            margin: 0;
         }
 
-        .bor {
-            background-color: aqua;
-            border: 1px solid;
+        .text-white,a {
+            color: #fff;
         }
+
+        .card-section {
+            margin-top: 100px;
+        }
+
+        .card-sadow {
+            border: 1px solid #1d1d1d;
+            border-radius: 3px;
+            /* box-shadow: 0px 0px 3px 3px #5a3737; */
+            box-shadow: 0 0 3px 3px rgb(182 149 149);
+        }
+       
     </style>
 </head>
 
 <body>
-    <!-- <div class="container" style="height: 500px;background-color: red;">
-       <div class="row" id="green">
-        <div class="col-5 bg-danger text-white">row</div>
-        <div class="col-7 bor">row</div>
-       </div>
-       sm
-       md
-       lg
-       xl
-       xxl
-    </div> -->
-
-
-
-    <!-- <div class="container-fluid">
-    style="height: 500px;background-color: red;">
-    <div class="row justify-content-start bg-warning " style="min-height: 400px;" id="green">
-    <div class="row justify-content-center bg-warning " style="min-height: 400px;" id="green">
-    <div class="row justify-content-end bg-warning " style="min-height: 400px;" id="green">
-    <div class="row justify-content-around bg-warning " style="min-height: 400px;" id="green">
-    <div class="row justify-content-between bg-warning " style="min-height: 400px;" id="green">
-    <div class="row justify-content-evenly bg-wasrning " style="min-height: 400px;" id="green">
-    <div class="col-4 bg-success ">this is div1</div>
-    <div class="col-4 bg-danger "> this is div2</div>
-    <div class="col bg-secondary ">div3 lorem</div> 
-    <div class="col bg-primary " >div4</div> 
-    <div class="col-5 col-sm-2 col-md-6 col-lg-4 col-xl-6 col-xxl-2 bg-danger text-white">row</div>
-         <div class="col-2 col-sm-10 col-md-6 col-lg-4 col-xl-1 col-xxl-8 bg-success text-white">row</div>
-         <div class="col-5 col-sm-12 col-md-5 col-lg-4 col-xl-5 col-xxl-2 bg-primary text-white">row</div>
-    </div>
-    </div> -->
-
-
-
-<!--3. Reordering -->
-    <!-- <div class="container-fluid">
-        <div class="row  bg-warning " style="min-height: 400px;" id="green">
-            <div class="col bg-success order-2">div1</div>
-            <div class="col bg-danger1 ">div2</div>
-            <div class="col bg-secondary order-3">div3</div>  
-        </div>
-    </div> -->
-    
-    
-    
-    <!-- Offsetting columns -->
-    <!-- <div class="container-fluid">
-        <div class="row  bg-warning " style="min-height: 400px;" id="green">
-            <div class="col-4 bg-success offset-1 ">div1</div>
-            <div class="col-4 bg-danger offset-2 ">div2</div> 
-        </div>
-    </div> -->
-
-    <!-- classes and component -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <p class="bg-danger text-white text-center">hello</p>
-                <img src="slad1.png" alt="" class="img-fluid">
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <img class="rounded-circle" src="images_logo.jpg" alt="Logo" width="30" height="24"
+                    class="d-inline-block align- text-top">
+                Sandip Chavda
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
             </div>
-            
         </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"
+                class=""></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
+                class=""></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slad1.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slad2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slad3.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
+    <section class="images-card-section">
+        <div class="container">
+            <div class="row card-section">
+                <div class="col-md-4 ">
+                    <div class="text-center card-sadow p-4">
+                        <img class="img-circle rounded-circle" src="imagelogo.webp" alt="Images" width="150"
+                            height="150">
+                        <h3 class="text-center">Heading</h3>
+                        <p class="text-center">Bootstrap uses Autoprefixer to deal with CSS vendor prefixes. you'll
+                            need to integrate Autoprefixer into your build process yourself. If you're using
+                            precompiled Bootstrap or using our Gruntfile.</p>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            View Detail &gt;&gt;
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="text-center card-sadow p-4">
+                        <img class="img-circle rounded-circle" src="images/pexels-photo-3977908.jpeg" alt="Images" width="150"
+                            height="150">
+                        <h3 class="text-center">Heading</h3>
+                        <p class="text-center">Bootstrap uses Autoprefixer to deal with CSS vendor prefixes. you'll
+                            need to integrate Autoprefixer into your build process yourself. If you're using
+                            precompiled Bootstrap or using our Gruntfile.</p>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            View Detail &gt;&gt;
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="text-center card-sadow p-4">
+                        <img class="img-circle rounded-circle" src="images/pexels-photo-682933.jpeg" alt="Images" width="150"
+                            height="150">
+                        <h3 class="text-center">Heading</h3>
+                        <p class="text-center">Bootstrap uses Autoprefixer to deal with CSS vendor prefixes. you'll
+                            need to integrate Autoprefixer into your build process yourself. If you're using
+                            precompiled Bootstrap or using our Gruntfile.</p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            View Detail &gt;&gt;
+                        </button>
+                    </div>
+
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">×</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                Paragraphs are the group of sentences combined together, about a certain topic. It
+                                is a very
+                                important form of writing as we write almost everything in paragraphs, be it an
+                                answer, essay,
+                                story, emails, etc. We can say that a well-structured paragraph is the essence of
+                                good writing.
+                                The purposes of the paragraph are to give information, to explain something, to tell
+                                a story,
+                                and to convince someone that our idea is right.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="card-sadow mt-3">
+                <div class="row p-2">
+                    <div class="col-md-8">
+                        <div>
+                            <h1>First featurette heading. It'll blow your mind.</h1>
+                            <p>Bootstrap uses Autoprefixer to deal with CSS vendor prefixes. you'll need to
+                                integrate
+                                Autoprefixer into your build process yourself. If you're using precompiled
+                                Bootstrap
+                                or
+                                using our Gruntfile.</p>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on right">View details &gt;&gt;</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <img src="images/pexels-photo-3977908.jpeg" class="img-responsive" alt="Car_logo" width="100%"
+                            height="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="card-sadow mt-3">
+                <div class="row p-2">
+                    <div class="col-md-4">
+                        <img src="images/pexels-photo-3977908.jpeg" class="img-responsive" alt="Car_logo" width="100%"
+                            height="100%">
+                    </div>
+                    <div class="col-md-8">
+                        <div>
+                            <h1>First featurette heading. It'll blow your mind.</h1>
+                            <p>Bootstrap uses Autoprefixer to deal with CSS vendor prefixes. you'll need to
+                                integrate
+                                Autoprefixer into your build process yourself. If you're using precompiled
+                                Bootstrap
+                                or
+                                using our Gruntfile.</p>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on right">View details &gt;&gt;</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-sadow mt-3">
+                <div class="row p-2">
+                    <div class="col-md-8">
+                        <div>
+                            <h1>First featurette heading. It'll blow your mind.</h1>
+                            <p>Bootstrap uses Autoprefixer to deal with CSS vendor prefixes. you'll need to
+                                integrate
+                                Autoprefixer into your build process yourself. If you're using precompiled
+                                Bootstrap
+                                or
+                                using our Gruntfile.</p>
+                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on right">View details &gt;&gt;</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <img src="images/pexels-photo-3977908.jpeg" class="img-responsive" alt="Car_logo" width="100%"
+                            height="100%">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="list-group mt-3">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list
+                    group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary
+                    list group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list
+                    group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list
+                    group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list
+                    group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list
+                    group
+                    item</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group
+                    item</a>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Fiel Input: <br><img src="images/fileupload.png" height="100"
+                            width="100" alt="#"></label>
+                    <input style="display: none;" type="file" id="formFile">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    </section>
+    <!-- <section class="footer-section mt-5 text-white bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="float-end text-right"><a href="#">Back to top</a></p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer id="mdb-footer" class="mt-5 text-white" style="background-color: #1d1d1d; ">
+        <div class="container py-5">
+            <div class="text-center">
+                <p class="text-white">
+                    Get useful tips &amp; free resources directly to your inbox along with exclusive subscriber-only
+                    content.
+                </p>
+                <a href="#" class="btn btn-primary">JOIN NOW<i class="fas fa-angle-double-right ms-2"></i></a>
+            </div>
+           
+            <div class="icon-group text-center mt-4 ">
+                <a href="#" ><i class="fa-fw fa-brands m-2 fa-youtube fa-2x"></i></a>
+                <a href="#" ><i class="fa-fw fa-brands m-2 fa-twitter fa-2x"></i></a>
+                <a href="#" ><i class="fa-fw fa-brands m-2 fa-instagram fa-2x"></i></a>
+                <a href="#" ><i class="fa-fw fa-brands m-2 fa-whatsapp fa-2x"></i></a>
+                <a href="#" ><i class="fa-fw fa-brands m-2 fa-facebook  fa-2x"></i></a>
+                <a href="#" ><i class="fa-fw fa-brands m-2 fa-google  fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="text-center p-3">© 2022 Copyright:
+            <a class="" href="#"> <strong>MD dhanti</strong></a>
+        </div>
+
+    </footer>
     <script src="bootstrap.bundle.js"></script>
+
+    <script src="assets/library/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
